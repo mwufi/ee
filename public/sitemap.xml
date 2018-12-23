@@ -3,16 +3,35 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://mwufi.github.io/categories/</loc>
+    <loc>https://peaceful-brown-1ee8cb.netlify.com/posts/my-first-post/</loc>
+    <lastmod>2018-12-22T19:51:36-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://peaceful-brown-1ee8cb.netlify.com/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://mwufi.github.io/</loc>
+    <loc>https://peaceful-brown-1ee8cb.netlify.com/</loc>
+    <lastmod>2018-12-22T19:51:36-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://mwufi.github.io/tags/</loc>
+    <loc>https://peaceful-brown-1ee8cb.netlify.com/posts/</loc>
+    <lastmod>2018-12-22T19:51:36-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://peaceful-brown-1ee8cb.netlify.com/tags/scene/</loc>
+    <lastmod>2018-12-22T19:51:36-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://peaceful-brown-1ee8cb.netlify.com/tags/</loc>
+    <lastmod>2018-12-22T19:51:36-05:00</lastmod>
     <priority>0</priority>
   </url>
   

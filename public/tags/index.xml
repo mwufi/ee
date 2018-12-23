@@ -2,13 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on StuffFluffRough</title>
-    <link>http://mwufi.github.io/tags/</link>
+    <link>https://peaceful-brown-1ee8cb.netlify.com/tags/</link>
     <description>Recent content in Tags on StuffFluffRough</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sat, 22 Dec 2018 19:51:36 -0500</lastBuildDate>
     
-	<atom:link href="http://mwufi.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://peaceful-brown-1ee8cb.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Scene</title>
+      <link>https://peaceful-brown-1ee8cb.netlify.com/tags/scene/</link>
+      <pubDate>Sat, 22 Dec 2018 19:51:36 -0500</pubDate>
+      
+      <guid>https://peaceful-brown-1ee8cb.netlify.com/tags/scene/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
