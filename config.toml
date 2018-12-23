@@ -2,6 +2,8 @@ baseURL = "http://mwufi.github.io"
 languageCode = "en-us"
 title = "StuffFluffRough"
 theme = "ananke"
+pygmentsCodeFences = true
+pygmentsStyle = "rainbow_dash"
 
 [params]
   favicon = ""
