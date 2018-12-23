@@ -17,7 +17,7 @@ Have the classical equations for electrodynamics:
 $$
 </div>
 
-This code prints "Hello, World!"!
+This code prints "Hello, World!" !
 ```go
 package main
 
