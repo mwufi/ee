@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>StuffFluffRough  | Learning Ocaml</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.52" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.955516233bcafa4d2a1c13cea63c7b50.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="Learning Ocaml" />
+<meta property="og:description" content="Programming languages matter.
+ This is the beginning of the OCaml book. It&rsquo;s been a while since I&rsquo;ve learned a new language to code in, and now, perhaps, is as good a time as any.
+the plan  Maybe if I spend an hour a day learning (reading and making programs) I&rsquo;ll be able to &ldquo;think&rdquo; in OCaml by the end of the break! Wouldn&rsquo;t that be great? I think OCaml is a great language to write compilers in, like Haskell." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://peaceful-brown-1ee8cb.netlify.com/posts/ocaml/" /><meta property="article:published_time" content="2018-12-22T23:13:36-05:00"/>
+<meta property="article:modified_time" content="2018-12-22T23:13:36-05:00"/>
+
+<meta itemprop="name" content="Learning Ocaml">
+<meta itemprop="description" content="Programming languages matter.
+ This is the beginning of the OCaml book. It&rsquo;s been a while since I&rsquo;ve learned a new language to code in, and now, perhaps, is as good a time as any.
+the plan  Maybe if I spend an hour a day learning (reading and making programs) I&rsquo;ll be able to &ldquo;think&rdquo; in OCaml by the end of the break! Wouldn&rsquo;t that be great? I think OCaml is a great language to write compilers in, like Haskell.">
+
+
+<meta itemprop="datePublished" content="2018-12-22T23:13:36-05:00" />
+<meta itemprop="dateModified" content="2018-12-22T23:13:36-05:00" />
+<meta itemprop="wordCount" content="1181">
+
+
+
+<meta itemprop="keywords" content="Ocaml," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Learning Ocaml"/>
+<meta name="twitter:description" content="Programming languages matter.
+ This is the beginning of the OCaml book. It&rsquo;s been a while since I&rsquo;ve learned a new language to code in, and now, perhaps, is as good a time as any.
+the plan  Maybe if I spend an hour a day learning (reading and making programs) I&rsquo;ll be able to &ldquo;think&rdquo; in OCaml by the end of the break! Wouldn&rsquo;t that be great? I think OCaml is a great language to write compilers in, like Haskell."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://peaceful-brown-1ee8cb.netlify.com/" class="f3 fw2 hover-white no-underline white-90 dib">
+      StuffFluffRough
+    </a>
+    <div class="flex-l items-center">
+      
+      
+<div hidden>
+  <span id="new-window-0">Opens in a new window</span>
+  <span id="new-window-1">Opens an external site</span>
+  <span id="new-window-2">Opens an external site in a new window</span>
+</div>
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3 ph0-l">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">Learning Ocaml</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2018-12-22T23:13:36-05:00">December 22, 2018</time>      
+      
+      
+    </header>
+
+    <main class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<blockquote>
+<p>Programming languages matter.</p>
+</blockquote>
+
+<p>This is the beginning of the OCaml book. It&rsquo;s been a while since I&rsquo;ve learned a new language to code in, and now, perhaps, is as good a time as any.</p>
+
+<h2 id="the-plan">the plan</h2>
+
+<blockquote>
+<p>Maybe if I spend an hour a day learning (reading and making programs) I&rsquo;ll be able to &ldquo;think&rdquo; in OCaml by the end of the break! Wouldn&rsquo;t that be great? I think OCaml is a great language to write compilers in, like Haskell. It also looks really neat - in fact, this is the reason I&rsquo;m bothering to do this in the first place!</p>
+</blockquote>
+
+<h1 id="introduction">Introduction</h1>
+
+<p>The installation and management of these third-party libraries is made much easier via a package management tool known as OPAM. We&rsquo;ll explain more about OPAM as the book unfolds, but it forms the basis of <strong>the Platform</strong>, which is a set of tools and libraries that, along with the OCaml compiler, lets you build real-world applications quickly and effectively.</p>
+
+<h1 id="install-ocaml">Install OCaml</h1>
+
+<p>The first step is to install! I followed the guide <a href="https://github.com/janestreet/install-ocaml">here</a>, which told me that I could do this:</p>
+
+<pre><code>brew install -y opam m4
+</code></pre>
+
+<h1 id="our-first-program">Our first program</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#ff79c6">open</span> <span style="color:#50fa7b">Base</span><span style="color:#ff79c6">;;</span>
+
+8 <span style="color:#ff79c6">/</span> 3<span style="color:#ff79c6">;;</span>
+<span style="color:#ff79c6">-</span> <span style="color:#ff79c6">:</span> <span style="color:#8be9fd">int</span> <span style="color:#ff79c6">=</span> 2
+3<span style="color:#ff79c6">.</span>5 <span style="color:#ff79c6">+.</span> 6<span style="color:#ff79c6">.;;</span>
+<span style="color:#ff79c6">-</span> <span style="color:#ff79c6">:</span> <span style="color:#8be9fd">float</span> <span style="color:#ff79c6">=</span> 9<span style="color:#ff79c6">.</span>5
+<span style="color:#ff79c6">let</span> x <span style="color:#ff79c6">=</span> 3 <span style="color:#ff79c6">+</span> 4<span style="color:#ff79c6">;;</span>
+<span style="color:#ff79c6">val</span> x <span style="color:#ff79c6">:</span> <span style="color:#8be9fd">int</span> <span style="color:#ff79c6">=</span> 7
+<span style="color:#ff79c6">let</span> x&#39; <span style="color:#ff79c6">=</span> 3<span style="color:#ff79c6">.</span> <span style="color:#ff79c6">+</span> 4<span style="color:#ff79c6">.;;</span>
+<span style="color:#ff79c6">val</span> x&#39; <span style="color:#ff79c6">:</span> <span style="color:#8be9fd">float</span> <span style="color:#ff79c6">=</span> 7<span style="color:#ff79c6">.</span></code></pre></div>
+<ul>
+<li>I like how the metaphor is <code>open</code>, and it ends with two semi-colons.</li>
+<li>OCaml distinguishes between floats and ints! You need different operators: <code>+.</code> instead of <code>+</code></li>
+<li>variaaables! Punctuation is excluded, except for _ and &lsquo;, and variables must start with a lowercase letter or an underscore. <code>FuNNyBusiness</code> won&rsquo;t cut it!</li>
+</ul>
+
+<p>We can also create functions.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#ff79c6">let</span> square x <span style="color:#ff79c6">=</span> x <span style="color:#ff79c6">*</span> x<span style="color:#ff79c6">;;</span>
+square 2<span style="color:#ff79c6">;;</span>
+<span style="color:#ff79c6">-</span> <span style="color:#ff79c6">:</span> <span style="color:#8be9fd">int</span> <span style="color:#ff79c6">=</span> 4</code></pre></div>
+<p>and import <em>modules</em> (in this case, <code>of_int</code> is a method which lives in the <code>Float</code> module)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#ff79c6">let</span> ratio x y <span style="color:#ff79c6">=</span>
+    Float.of_int x <span style="color:#ff79c6">/.</span> Float.of_int y
+<span style="color:#ff79c6">;;</span>
+<span style="color:#ff79c6">val</span> ratio <span style="color:#ff79c6">:</span> <span style="color:#8be9fd">int</span> <span style="color:#ff79c6">-&gt;</span> <span style="color:#8be9fd">int</span> <span style="color:#ff79c6">-&gt;</span> <span style="color:#8be9fd">float</span> <span style="color:#ff79c6">=</span>
+
+ratio 4 7<span style="color:#ff79c6">;;</span>
+<span style="color:#ff79c6">-</span> <span style="color:#ff79c6">:</span> <span style="color:#8be9fd">float</span> <span style="color:#ff79c6">=</span> 0<span style="color:#ff79c6">.</span>57142857</code></pre></div>
+<p>Modules can be opened to make their contents available without explicitly typing the module name. This is what we did with <code>Base</code> earlier. To make it easier to read:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#ff79c6">let</span> ratio x y <span style="color:#ff79c6">=</span>
+    <span style="color:#ff79c6">let</span> <span style="color:#ff79c6">open</span> Float.<span style="color:#50fa7b">O</span> <span style="color:#ff79c6">in</span>
+    of_int x <span style="color:#ff79c6">/</span> of_int y</code></pre></div>
+<p>or even better:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#ff79c6">let</span> ratio x y <span style="color:#ff79c6">=</span> 
+    Float.O.<span style="color:#ff79c6">(</span>of_int x <span style="color:#ff79c6">/</span> of_int y<span style="color:#ff79c6">)</span></code></pre></div>
+<p>What does this function do?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#ff79c6">let</span> sum_if_true test first second <span style="color:#ff79c6">=</span>
+    <span style="color:#ff79c6">(</span><span style="color:#ff79c6">if</span> test first <span style="color:#ff79c6">then</span> first <span style="color:#ff79c6">else</span> 0<span style="color:#ff79c6">)</span>
+    <span style="color:#ff79c6">+</span> <span style="color:#ff79c6">(</span><span style="color:#ff79c6">if</span> test second <span style="color:#ff79c6">then</span> second <span style="color:#ff79c6">else</span> 0<span style="color:#ff79c6">)</span>
+<span style="color:#ff79c6">;;</span>
+<span style="color:#ff79c6">val</span> sum_if_true <span style="color:#ff79c6">:</span> <span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> <span style="color:#ff79c6">-&gt;</span> <span style="color:#8be9fd">bool</span><span style="color:#ff79c6">)</span> <span style="color:#ff79c6">-&gt;</span> <span style="color:#8be9fd">int</span> <span style="color:#ff79c6">-&gt;</span> <span style="color:#8be9fd">int</span> <span style="color:#ff79c6">-&gt;</span> <span style="color:#8be9fd">int</span> <span style="color:#ff79c6">=</span></code></pre></div>
+<ul>
+<li>What&rsquo;s with the arrows? You can read them as &ldquo;everything but the last one is an argument, and the last one is the return value&rdquo;</li>
+</ul>
+
+<p>Equal signs are weird here:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#ff79c6">let</span> even x <span style="color:#ff79c6">=</span>
+x <span style="color:#ff79c6">%</span> 2 <span style="color:#ff79c6">=</span> 0
+<span style="color:#ff79c6">;;</span>
+<span style="color:#ff79c6">val</span> even <span style="color:#ff79c6">:</span> <span style="color:#8be9fd">int</span> <span style="color:#ff79c6">-&gt;</span> <span style="color:#8be9fd">bool</span> <span style="color:#ff79c6">=</span></code></pre></div>
+<ul>
+<li>We used <code>=</code> in two different ways: once as part of the <code>even</code> definition; and once as an equality test, when comparing <code>x % 2</code> to <code>0</code>.</li>
+</ul>
+
+<h1 id="type-inference">Type Inference</h1>
+
+<p>OCaml does some clever type inference when you write your programs. Imagine the following function:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#ff79c6">let</span> first test x y <span style="color:#ff79c6">=</span>
+    <span style="color:#ff79c6">if</span> test x <span style="color:#ff79c6">then</span> x <span style="color:#ff79c6">else</span> y
+<span style="color:#ff79c6">;;</span>
+<span style="color:#ff79c6">val</span> first_if_true <span style="color:#ff79c6">:</span> <span style="color:#ff79c6">(</span><span style="color:#ff79c6">&#39;</span>a <span style="color:#ff79c6">-&gt;</span> <span style="color:#8be9fd">bool</span><span style="color:#ff79c6">)</span> <span style="color:#ff79c6">-&gt;</span> <span style="color:#ff79c6">&#39;</span>a <span style="color:#ff79c6">-&gt;</span> <span style="color:#ff79c6">&#39;</span>a <span style="color:#ff79c6">-&gt;</span> <span style="color:#ff79c6">&#39;</span>a <span style="color:#ff79c6">=</span></code></pre></div>
+<p>How does it know what to return? <code>x</code> and <code>y</code> can be anything! But OCaml enforces a single type, since a function can&rsquo;t return two different types (unlike in Python). So there is one constraint now, that <code>x</code> and <code>y</code> have to share a common type.</p>
+
+<h1 id="lists-of-data">Lists of data</h1>
+
+<p>Sooner or later, you&rsquo;ll want to deal with more interesting things than numbers, and that&rsquo;s where collections come in.</p>
+
+<p>Tuples</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#ff79c6">let</span> a_tuple <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">(</span>3<span style="color:#ff79c6">,</span> <span style="color:#f1fa8c">&#34;three&#34;</span><span style="color:#ff79c6">);;</span>
+<span style="color:#ff79c6">val</span> a_tuple <span style="color:#ff79c6">:</span> <span style="color:#8be9fd">int</span> <span style="color:#ff79c6">*</span> <span style="color:#8be9fd">string</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">(</span>3<span style="color:#ff79c6">,</span> <span style="color:#f1fa8c">&#34;three&#34;</span><span style="color:#ff79c6">)</span>
+<span style="color:#ff79c6">let</span> <span style="color:#ff79c6">(</span>x<span style="color:#ff79c6">,</span>y<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">=</span> a_tuple<span style="color:#ff79c6">;;</span>
+<span style="color:#ff79c6">val</span> x <span style="color:#ff79c6">:</span> <span style="color:#8be9fd">int</span> <span style="color:#ff79c6">=</span> 3
+<span style="color:#ff79c6">val</span> y <span style="color:#ff79c6">:</span> <span style="color:#8be9fd">string</span> <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;three&#34;</span>
+
+x <span style="color:#ff79c6">+</span> String.length y
+<span style="color:#ff79c6">-</span> <span style="color:#ff79c6">:</span> <span style="color:#8be9fd">int</span> <span style="color:#ff79c6">=</span> 8
+
+<span style="color:#ff79c6">let</span> distance <span style="color:#ff79c6">(</span>x1<span style="color:#ff79c6">,</span> y1<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">(</span>x2<span style="color:#ff79c6">,</span> y2<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">=</span> 
+    Float.sqrt <span style="color:#ff79c6">((</span>x1 <span style="color:#ff79c6">-.</span> x2<span style="color:#ff79c6">))</span> <span style="color:#ff79c6">**.</span> 2 <span style="color:#ff79c6">+.</span> <span style="color:#ff79c6">((</span>y1 <span style="color:#ff79c6">-.</span> y2<span style="color:#ff79c6">))</span> <span style="color:#ff79c6">**.</span> 2
+<span style="color:#ff79c6">;;</span>
+<span style="color:#ff79c6">val</span> distance <span style="color:#ff79c6">:</span> <span style="color:#8be9fd">float</span> <span style="color:#ff79c6">*</span> <span style="color:#8be9fd">float</span> <span style="color:#ff79c6">-&gt;</span> <span style="color:#8be9fd">float</span> <span style="color:#ff79c6">*</span> <span style="color:#8be9fd">float</span> <span style="color:#ff79c6">-&gt;</span> <span style="color:#8be9fd">float</span> <span style="color:#ff79c6">=</span></code></pre></div>
+<p>Lists</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#ff79c6">let</span> languages <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">[</span><span style="color:#f1fa8c">&#34;Spanish&#34;</span><span style="color:#ff79c6">;</span> <span style="color:#f1fa8c">&#34;Esperanto&#34;</span><span style="color:#ff79c6">];;</span>
+<span style="color:#ff79c6">val</span> languages <span style="color:#ff79c6">:</span> <span style="color:#8be9fd">string</span> <span style="color:#8be9fd">list</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">[</span><span style="color:#f1fa8c">&#34;Spanish&#34;</span><span style="color:#ff79c6">;</span> <span style="color:#f1fa8c">&#34;Esperanto&#34;</span><span style="color:#ff79c6">]</span>
+
+List.length languages <span style="color:#ff79c6">::</span> <span style="color:#f1fa8c">&#34;No&#34;</span><span style="color:#ff79c6">;;</span>
+<span style="color:#ff79c6">-</span> <span style="color:#ff79c6">:</span> <span style="color:#8be9fd">int</span> <span style="color:#ff79c6">=</span> 3
+
+List.map languages <span style="color:#ff79c6">~</span>f<span style="color:#ff79c6">:</span>String.length<span style="color:#ff79c6">;;</span>
+<span style="color:#ff79c6">-</span> <span style="color:#ff79c6">:</span> <span style="color:#8be9fd">int</span> <span style="color:#8be9fd">list</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">[</span>7<span style="color:#ff79c6">;</span> 9<span style="color:#ff79c6">;</span> 2<span style="color:#ff79c6">]</span>
+
+<span style="color:#ff79c6">[</span>1<span style="color:#ff79c6">;</span>2<span style="color:#ff79c6">;</span>3<span style="color:#ff79c6">]</span> <span style="color:#ff79c6">@</span> <span style="color:#ff79c6">[</span>4<span style="color:#ff79c6">;</span>5<span style="color:#ff79c6">;</span>6<span style="color:#ff79c6">];;</span>
+<span style="color:#ff79c6">-</span> <span style="color:#ff79c6">:</span> <span style="color:#8be9fd">int</span> <span style="color:#8be9fd">list</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">[</span>1<span style="color:#ff79c6">;</span> 2<span style="color:#ff79c6">;</span> 3<span style="color:#ff79c6">;</span> 4<span style="color:#ff79c6">;</span> 5<span style="color:#ff79c6">;</span> 6<span style="color:#ff79c6">]</span></code></pre></div>
+<ul>
+<li>We can add elements to the front of a list with <code>::</code>:</li>
+<li>It&rsquo;s important to remember that <code>@</code> is not a constant time operation. (<em>wait, it&rsquo;s not? Are you sure they&rsquo;re not using linked lists?</em>)</li>
+</ul>
+
+<p>Special note</p>
+
+<ul>
+<li><code>~f</code> is a <em>labeled argument</em>! (for <code>List.map</code> above). Labeled arguments are specified by name rather than by position (and hence, can be specified not in any order)</li>
+</ul>
+
+<p>Like in Lisp, you can do things like &ldquo;extract the first element from a list&rdquo;:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#ff79c6">let</span> my_fav <span style="color:#ff79c6">(</span>fav <span style="color:#ff79c6">::</span> rest<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">=</span>
+    fav
+<span style="color:#ff79c6">;;</span>
+<span style="color:#ff79c6">val</span> my_favorite_language <span style="color:#ff79c6">:</span> <span style="color:#ff79c6">&#39;</span>a <span style="color:#8be9fd">list</span> <span style="color:#ff79c6">-&gt;</span> <span style="color:#ff79c6">&#39;</span>a <span style="color:#ff79c6">=</span>
+
+my_favorite_language <span style="color:#ff79c6">[</span><span style="color:#f1fa8c">&#34;English&#34;</span><span style="color:#ff79c6">;</span><span style="color:#f1fa8c">&#34;Spanish&#34;</span><span style="color:#ff79c6">;</span><span style="color:#f1fa8c">&#34;French&#34;</span><span style="color:#ff79c6">];;</span>
+<span style="color:#ff79c6">-</span> <span style="color:#ff79c6">:</span> <span style="color:#8be9fd">string</span> <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;English&#34;</span>
+my_favorite_language []<span style="color:#ff79c6">;;</span>
+<span style="color:#50fa7b">Exception</span><span style="color:#ff79c6">:</span> <span style="color:#50fa7b">Match_failure</span> <span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;//toplevel//&#34;</span><span style="color:#ff79c6">,</span> 1<span style="color:#ff79c6">,</span> 26<span style="color:#ff79c6">).</span></code></pre></div>
+<p>But uh-oh. What happened? (<em>what if the list has no elements?!</em>) New version uses <code>match</code> to handle all the cases.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#ff79c6">let</span> my_fav languages <span style="color:#ff79c6">=</span>
+    <span style="color:#ff79c6">match</span> languages <span style="color:#ff79c6">with</span>
+    <span style="color:#ff79c6">|</span> first <span style="color:#ff79c6">::</span> rest <span style="color:#ff79c6">-&gt;</span> first
+    <span style="color:#ff79c6">|</span> [] <span style="color:#ff79c6">-&gt;</span> <span style="color:#f1fa8c">&#34;Ocaml is the best!!!&#34;</span> <span style="color:#6272a4">(*A good default!*)</span>
+<span style="color:#ff79c6">;;</span></code></pre></div>
+<ul>
+<li>I think this is the first function that I&rsquo;m happy with (is distinctively OCaml)</li>
+</ul>
+
+<p>How to make a function recursive (just add <code>rec</code>!)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#ff79c6">let</span> <span style="color:#ff79c6">rec</span> sum everything <span style="color:#ff79c6">=</span>
+    <span style="color:#ff79c6">match</span> everything <span style="color:#ff79c6">with</span>
+    <span style="color:#ff79c6">|</span> [] <span style="color:#ff79c6">-&gt;</span> 0
+    <span style="color:#ff79c6">|</span> head <span style="color:#ff79c6">::</span> tail <span style="color:#ff79c6">-&gt;</span> head <span style="color:#ff79c6">+</span> sum tail
+<span style="color:#ff79c6">;;</span>
+sum <span style="color:#ff79c6">[</span>1<span style="color:#ff79c6">;</span>2<span style="color:#ff79c6">;</span>3<span style="color:#ff79c6">];;</span>
+<span style="color:#ff79c6">-</span> <span style="color:#ff79c6">:</span> <span style="color:#8be9fd">int</span> 6</code></pre></div>
+<p>Options</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#ff79c6">let</span> divide x y <span style="color:#ff79c6">=</span>
+<span style="color:#ff79c6">if</span> y <span style="color:#ff79c6">=</span> 0 <span style="color:#ff79c6">then</span> <span style="color:#50fa7b">None</span> <span style="color:#ff79c6">else</span> <span style="color:#50fa7b">Some</span> <span style="color:#ff79c6">(</span>x <span style="color:#ff79c6">/</span> y<span style="color:#ff79c6">)</span>
+<span style="color:#ff79c6">;;</span>
+<span style="color:#ff79c6">val</span> divide <span style="color:#ff79c6">:</span> <span style="color:#8be9fd">int</span> <span style="color:#ff79c6">-&gt;</span> <span style="color:#8be9fd">int</span> <span style="color:#ff79c6">-&gt;</span> <span style="color:#8be9fd">int</span> option <span style="color:#ff79c6">=</span></code></pre></div>
+<ul>
+<li>This function returns an Option, not a real value. what can we do with options? A: can use pattern matching, as we did with tuples and lists</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#ff79c6">let</span> f x y <span style="color:#ff79c6">=</span>
+    <span style="color:#ff79c6">match</span> divide x y  <span style="color:#ff79c6">with</span>
+    <span style="color:#ff79c6">|</span> <span style="color:#50fa7b">None</span> <span style="color:#ff79c6">-&gt;</span> 100 <span style="color:#6272a4">(*divide by 0 error!*)</span>
+    <span style="color:#ff79c6">|</span> <span style="color:#50fa7b">Some</span> <span style="color:#ff79c6">(</span>i<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">-&gt;</span> i
+<span style="color:#ff79c6">;;</span></code></pre></div>
+<p>Why do options help? In languages like Java and C#, variables might be nullable. But here, if we want to make that the case, we have to explicitly change the type to an option.</p>
+
+<p>Defining new types</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#ff79c6">type</span> point2d  <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">{</span>x<span style="color:#ff79c6">:</span> <span style="color:#8be9fd">float</span><span style="color:#ff79c6">,</span> y<span style="color:#ff79c6">:</span> <span style="color:#8be9fd">float</span><span style="color:#ff79c6">};;</span>
+
+<span style="color:#ff79c6">let</span> magnitude <span style="color:#ff79c6">{</span> x <span style="color:#ff79c6">=</span> x_pos<span style="color:#ff79c6">;</span> y <span style="color:#ff79c6">=</span> y_pos <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">=</span>
+Float.sqrt <span style="color:#ff79c6">(</span>x_pos <span style="color:#ff79c6">**.</span> 2<span style="color:#ff79c6">.</span> <span style="color:#ff79c6">+.</span> y_pos <span style="color:#ff79c6">**.</span> 2<span style="color:#ff79c6">.)</span>
+<span style="color:#ff79c6">;;</span>
+<span style="color:#ff79c6">val</span> magnitude <span style="color:#ff79c6">:</span> point2d <span style="color:#ff79c6">-&gt;</span> <span style="color:#8be9fd">float</span> <span style="color:#ff79c6">=</span></code></pre></div>
+<p>Finally, have a code snippet. Recognize all the things that are being used here?</p>
+
+<pre><code>let is_inside_scene_element point scene_element =
+  let open Float.O in
+  match scene_element with
+  | Circle { center; radius } -&gt;
+    distance center point &lt; radius
+  | Rect { lower_left; width; height } -&gt;
+    point.x    &gt; lower_left.x &amp;&amp; point.x &lt; lower_left.x + width
+    &amp;&amp; point.y &gt; lower_left.y &amp;&amp; point.y &lt; lower_left.y + height
+  | Segment { endpoint1; endpoint2 } -&gt; false
+</code></pre>
+
+<p>And now it&rsquo;s time for bed!!</p>
+<ul class="pa0">
+  
+   <li class="list">
+     <a href="/tags/ocaml" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Ocaml</a>
+   </li>
+  
+</ul>
+<div class="mt6">
+        
+      </div>
+    </main>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+        extensions: ["AMSmath.js", "AMSsymbols.js"] }
+}
+});
+</script>
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://peaceful-brown-1ee8cb.netlify.com/" >
+    &copy; 2018 StuffFluffRough
+  </a>
+    <div>
+<div hidden>
+  <span id="new-window-0">Opens in a new window</span>
+  <span id="new-window-1">Opens an external site</span>
+  <span id="new-window-2">Opens an external site in a new window</span>
+</div>
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

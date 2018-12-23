@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ocaml on StuffFluffRough</title>
+    <link>https://peaceful-brown-1ee8cb.netlify.com/tags/ocaml/</link>
+    <description>Recent content in Ocaml on StuffFluffRough</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 22 Dec 2018 23:13:36 -0500</lastBuildDate>
+    
+	<atom:link href="https://peaceful-brown-1ee8cb.netlify.com/tags/ocaml/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Learning Ocaml</title>
+      <link>https://peaceful-brown-1ee8cb.netlify.com/posts/ocaml/</link>
+      <pubDate>Sat, 22 Dec 2018 23:13:36 -0500</pubDate>
+      
+      <guid>https://peaceful-brown-1ee8cb.netlify.com/posts/ocaml/</guid>
+      <description>Programming languages matter.
+ This is the beginning of the OCaml book. It&amp;rsquo;s been a while since I&amp;rsquo;ve learned a new language to code in, and now, perhaps, is as good a time as any.
+the plan  Maybe if I spend an hour a day learning (reading and making programs) I&amp;rsquo;ll be able to &amp;ldquo;think&amp;rdquo; in OCaml by the end of the break! Wouldn&amp;rsquo;t that be great? I think OCaml is a great language to write compilers in, like Haskell.</description>
+    </item>
+    
+  </channel>
+</rss>

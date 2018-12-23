@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://peaceful-brown-1ee8cb.netlify.com/posts/ocaml/</loc>
+    <lastmod>2018-12-22T23:13:36-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://peaceful-brown-1ee8cb.netlify.com/posts/my-first-post/</loc>
     <lastmod>2018-12-22T19:51:36-05:00</lastmod>
   </url>
@@ -14,12 +19,18 @@
   
   <url>
     <loc>https://peaceful-brown-1ee8cb.netlify.com/</loc>
-    <lastmod>2018-12-22T19:51:36-05:00</lastmod>
+    <lastmod>2018-12-22T23:13:36-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://peaceful-brown-1ee8cb.netlify.com/tags/ocaml/</loc>
+    <lastmod>2018-12-22T23:13:36-05:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://peaceful-brown-1ee8cb.netlify.com/posts/</loc>
-    <lastmod>2018-12-22T19:51:36-05:00</lastmod>
+    <lastmod>2018-12-22T23:13:36-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -31,7 +42,7 @@
   
   <url>
     <loc>https://peaceful-brown-1ee8cb.netlify.com/tags/</loc>
-    <lastmod>2018-12-22T19:51:36-05:00</lastmod>
+    <lastmod>2018-12-22T23:13:36-05:00</lastmod>
     <priority>0</priority>
   </url>
   

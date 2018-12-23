@@ -1,7 +1,6 @@
 ---
 title: "Learning Ocaml"
 date: 2018-12-22T23:13:36-05:00
-draft: true
 tags: ["Ocaml"]
 ---
 
