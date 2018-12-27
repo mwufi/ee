@@ -1,7 +1,6 @@
 ---
 title: "On filmmaking"
 date: 2018-12-27T17:19:48-06:00
-draft: true
 ---
 
 From a site on the internet:
