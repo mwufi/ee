@@ -214,7 +214,7 @@ val magnitude : point2d -> float =
 ```
 
 Finally, have a code snippet. Recognize all the things that are being used here?
-```
+```ocaml
 let is_inside_scene_element point scene_element =
   let open Float.O in
   match scene_element with
@@ -227,3 +227,14 @@ let is_inside_scene_element point scene_element =
 ```
 
 And now it's time for bed!!
+
+# Day 2
+
+Going through Jane Street's [Learn OCaml Workshop](https://github.com/janestreet/learn-ocaml-workshop), which has commented exercises for learning OCaml!
+
+Other resources:
+
+* [INRIA's OCaml manual](http://caml.inria.fr/pub/docs/manual-ocaml/moduleexamples.html#sec18) on OCaml
+* [Real World OCaml](http://dev.realworldocaml.org/files-modules-and-programs.html)
+
+These really cover all I need to know about the language - on to build real programs!

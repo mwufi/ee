@@ -44,7 +44,7 @@ the plan  Maybe if I spend an hour a day learning (reading and making programs) 
 
 <meta itemprop="datePublished" content="2018-12-22T23:13:36-05:00" />
 <meta itemprop="dateModified" content="2018-12-22T23:13:36-05:00" />
-<meta itemprop="wordCount" content="1181">
+<meta itemprop="wordCount" content="1224">
 
 
 
@@ -294,19 +294,29 @@ Float.sqrt <span style="color:#ff79c6">(</span>x_pos <span style="color:#ff79c6"
 <span style="color:#ff79c6">;;</span>
 <span style="color:#ff79c6">val</span> magnitude <span style="color:#ff79c6">:</span> point2d <span style="color:#ff79c6">-&gt;</span> <span style="color:#8be9fd">float</span> <span style="color:#ff79c6">=</span></code></pre></div>
 <p>Finally, have a code snippet. Recognize all the things that are being used here?</p>
-
-<pre><code>let is_inside_scene_element point scene_element =
-  let open Float.O in
-  match scene_element with
-  | Circle { center; radius } -&gt;
-    distance center point &lt; radius
-  | Rect { lower_left; width; height } -&gt;
-    point.x    &gt; lower_left.x &amp;&amp; point.x &lt; lower_left.x + width
-    &amp;&amp; point.y &gt; lower_left.y &amp;&amp; point.y &lt; lower_left.y + height
-  | Segment { endpoint1; endpoint2 } -&gt; false
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#ff79c6">let</span> is_inside_scene_element point scene_element <span style="color:#ff79c6">=</span>
+  <span style="color:#ff79c6">let</span> <span style="color:#ff79c6">open</span> Float.<span style="color:#50fa7b">O</span> <span style="color:#ff79c6">in</span>
+  <span style="color:#ff79c6">match</span> scene_element <span style="color:#ff79c6">with</span>
+  <span style="color:#ff79c6">|</span> <span style="color:#50fa7b">Circle</span> <span style="color:#ff79c6">{</span> center<span style="color:#ff79c6">;</span> radius <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">-&gt;</span>
+    distance center point <span style="color:#ff79c6">&lt;</span> radius
+  <span style="color:#ff79c6">|</span> <span style="color:#50fa7b">Rect</span> <span style="color:#ff79c6">{</span> lower_left<span style="color:#ff79c6">;</span> width<span style="color:#ff79c6">;</span> height <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">-&gt;</span>
+    point<span style="color:#ff79c6">.</span>x    <span style="color:#ff79c6">&gt;</span> lower_left<span style="color:#ff79c6">.</span>x <span style="color:#ff79c6">&amp;&amp;</span> point<span style="color:#ff79c6">.</span>x <span style="color:#ff79c6">&lt;</span> lower_left<span style="color:#ff79c6">.</span>x <span style="color:#ff79c6">+</span> width
+    <span style="color:#ff79c6">&amp;&amp;</span> point<span style="color:#ff79c6">.</span>y <span style="color:#ff79c6">&gt;</span> lower_left<span style="color:#ff79c6">.</span>y <span style="color:#ff79c6">&amp;&amp;</span> point<span style="color:#ff79c6">.</span>y <span style="color:#ff79c6">&lt;</span> lower_left<span style="color:#ff79c6">.</span>y <span style="color:#ff79c6">+</span> height
+  <span style="color:#ff79c6">|</span> <span style="color:#50fa7b">Segment</span> <span style="color:#ff79c6">{</span> endpoint1<span style="color:#ff79c6">;</span> endpoint2 <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">-&gt;</span> false</code></pre></div>
 <p>And now it&rsquo;s time for bed!!</p>
+
+<h1 id="day-2">Day 2</h1>
+
+<p>Going through Jane Street&rsquo;s <a href="https://github.com/janestreet/learn-ocaml-workshop">Learn OCaml Workshop</a>, which has commented exercises for learning OCaml!</p>
+
+<p>Other resources:</p>
+
+<ul>
+<li><a href="http://caml.inria.fr/pub/docs/manual-ocaml/moduleexamples.html#sec18">INRIA&rsquo;s OCaml manual</a> on OCaml</li>
+<li><a href="http://dev.realworldocaml.org/files-modules-and-programs.html">Real World OCaml</a></li>
+</ul>
+
+<p>These really cover all I need to know about the language - on to build real programs!</p>
 <ul class="pa0">
   
    <li class="list">
